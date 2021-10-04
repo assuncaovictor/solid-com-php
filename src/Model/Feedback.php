@@ -4,7 +4,7 @@ namespace Alura\Solid\Model;
 
 class Feedback
 {
-    private int $notaota;
+    private int $nota;
     private string $depoimento;
 
     public function __construct(int $nota, ?string $depoimento)
@@ -15,5 +15,15 @@ class Feedback
 
         $this->nota = $nota;
         $this->depoimento = $depoimento;
+    }
+
+    public function recuperaNota(): int
+    {
+        return $this->nota;
+    }
+
+    public function recuperaDepoimento(): string
+    {
+        return $this->depoimento;
     }
 }
