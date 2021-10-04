@@ -4,7 +4,7 @@ namespace Assuncaovictor\Alura\Solid\Model;
 
 use DateInterval;
 
-class Video
+class Video implements Assistivel
 {
     protected bool $assistido;
     protected string $nome;
