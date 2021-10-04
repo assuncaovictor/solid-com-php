@@ -4,9 +4,9 @@ namespace Alura\Solid\Model;
 
 class Curso
 {
-    private $nome;
-    private $videos;
-    private $feedbacks;
+    private string $nome;
+    private array $videos;
+    private array $feedbacks;
 
     public function __construct(string $nome)
     {
@@ -15,13 +15,9 @@ class Curso
         $this->feedbacks = [];
     }
 
-    public function receberFeedback(int $nota, ?string $depoimento): void
+    public function receberFeedback(Feedback $feedback): void
     {
-        if ($nota < 9 && empty($depoimento)) {
-            throw new \DomainException('Depoimento obrigatório');
-        }
-
-        $this->feedbacks[] = [$nota, $depoimento];
+        $this->feedbacks[] = $feedback;
     }
 
     public function adicionarVideo(Video $video)
