@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Solid\Model;
+namespace Assuncaovictor\Alura\Solid\Model;
 
 interface Pontuavel
 {

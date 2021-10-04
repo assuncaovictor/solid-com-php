@@ -1,18 +1,20 @@
 <?php
 
-namespace Alura\Solid\Model;
+namespace Assuncaovictor\Alura\Solid\Model;
 
 use DateInterval;
 
 class Video
 {
-    protected bool $assistido = false;
+    protected bool $assistido;
     protected string $nome;
-    protected DateInterval $duracao;
+
+    /** @var \DateInterval */
+    protected $duracao;
 
     public function __construct(string $nome)
     {
-        $this->nome = $nome;
+        $this->nome = strtolower($nome);
         $this->assistido = false;
         $this->duracao = \DateInterval::createFromDateString('0');
     }

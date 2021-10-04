@@ -1,8 +1,15 @@
 {
-  "name": "assuncaovictor/alura-solid",
-  "autoload": {
-    "psr-4": {
-      "Alura\\Solid\\": "src/"
-    }
-  }
+    "name": "assuncaovictor/alura",
+    "autoload": {
+        "psr-4": {
+            "Assuncaovictor\\Alura\\Solid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Victor Assunção Melo",
+            "email": "victorassuncao3382@gmail.com"
+        }
+    ],
+    "require": {}
 }
